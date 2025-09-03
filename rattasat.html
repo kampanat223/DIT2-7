@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ฟอร์มและตาราง</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f7f9;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      color: #333;
+      margin-top: 30px;
+    }
+
+    .form-container {
+      background: #fff;
+      padding: 30px 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      margin: 20px 0;
+      width: 100%;
+      max-width: 500px;
+    }
+
+    label {
+      display: block;
+      margin: 15px 0 5px;
+      font-weight: bold;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      background: #007BFF;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 90%;
+      max-width: 800px;
+      background: #fff;
+      box-shadow: 0 0 15px rgba(0,0,0,0.05);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 40px;
+    }
+
+    th, td {
+      padding: 15px 20px;
+      text-align: left;
+      border-bottom: 1px solid #eee;
+    }
+
+    th {
+      background: #007BFF;
+      color: #fff;
+    }
+
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>ฟอร์มลงทะเบียนผู้ใช้</h1>
+
+  <div class="form-container">
+    <form>
+      <label for="name">ชื่อ-นามสกุล</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">อีเมล</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="gender">เพศ</label>
+      <select id="gender" name="gender">
+        <option value="">-- เลือกเพศ --</option>
+        <option value="male">ชาย</option>
+        <option value="female">หญิง</option>
+        <option value="other">อื่น ๆ</option>
+      </select>
+
+      <button type="submit">ส่งข้อมูล</button>
+    </form>
+  </div>
+
+  <h1>รายชื่อผู้ลงทะเบียน</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ลำดับ</th>
+        <th>ชื่อ</th>
+        <th>อีเมล</th>
+        <th>เพศ</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>สมชาย ใจดี</td>
+        <td>somchai@example.com</td>
+        <td>ชาย</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>สมหญิง แสนสวย</td>
+        <td>somying@example.com</td>
+        <td>หญิง</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>
